@@ -116,6 +116,7 @@ body {
   display: none;
 }
 
+.dropdown:hover .dropdown-content3{display: block;}
 
 .dropbtn:hover .drop-icon{transform: rotate(90deg);}
 .dropbtn1:hover .drop-icon{transform: rotate(90deg);}
@@ -174,6 +175,6 @@ body {
     margin-top: 10px;
     height: 650px;
     padding-right: 10px;
-    overflow-y: scroll; 
-    
+    overflow-y: scroll;  
 }
+

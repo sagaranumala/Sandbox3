@@ -4,7 +4,7 @@ const Transactions = () => {
   return (
     <div className='flex flex-col gap-[20px]'>
         <span className=''>Transactions -&gt; Customer Credit Transfer -&gt; IPTXN20240812000001</span>
-        <div className='flex flex-wrap gap-[20px] border-solid border-[2px] border-black p-[20px] rounded-[20px]'>
+        <div className='w-auto flex flex-wrap gap-[20px] border-solid border-[2px] border-black p-[20px] rounded-[20px]'>
             <div className='h-[40px] bg-[lightgray] w-[250px] text-center rounded-[5px] p-[5px]'>Txn ID: IPTXN20240812000001</div>
             <div className='h-[40px] bg-[lightgray] w-[250px] text-center rounded-[5px] p-[5px]'>Txn Type: CCT</div>
             <div className='h-[40px] bg-[lightgray] w-[250px] text-center rounded-[5px] p-[5px]'>Party :<a href='#' className='text-[blue] underline'>HDFC NY</a></div>
@@ -14,7 +14,7 @@ const Transactions = () => {
             <div className='h-[40px] bg-[lightgray] w-[250px] text-center rounded-[5px] p-[5px]'>Preferred Account : NO</div>
             <div className='h-[40px] bg-[lightgray] w-[250px] text-center rounded-[5px] p-[5px]'>Preferred Account : NO</div>
         </div>
-        <div className='flex flex-wrap gap-[20px] border-solid border-[2px] border-black p-[20px] rounded-[20px]'>
+        <div className='w-auto flex flex-wrap gap-[20px] border-solid border-[2px] border-black p-[20px] rounded-[20px]'>
             <div className='h-[40px] bg-[lightgray] w-[250px] text-center rounded-[5px] p-[5px]'>Settlement Amount: 25000.00</div>
             <div className='h-[40px] bg-[lightgray] w-[250px] text-center rounded-[5px] p-[5px]'>Settlement Currency: USD</div>
             <div className='h-[40px] bg-[lightgray] w-[300px] text-center rounded-[5px] p-[5px]'>Execution Date: 08082024T12:35.56.000</div>

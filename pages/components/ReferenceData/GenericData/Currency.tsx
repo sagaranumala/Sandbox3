@@ -15,6 +15,7 @@ const Currency = () => {
         <List/>:   
        <Example/>
         }
+        <div className='ml-[85%] mt-[10px]'>Version # | Time Zone</div>
     </div>
   )
 }

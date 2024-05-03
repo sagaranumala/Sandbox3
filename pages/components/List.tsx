@@ -82,21 +82,21 @@ useEffect(()=>{
    console.log(data)
    console.log(data2[0])
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col gap-[5px] mt-[50px]'>
         {
             data.map((user:User1,i)=>{
-                return <div className="dropdown bg-[aqua] w-[300px]" key={i}>
+                return <div className="dropdown w-[300px] relative" key={i}>
                             <div className="dropbtn" id='1' >
                                 <ChevronRightSharpIcon className='drop-icon' id='1'/>
                                 <button className='ml-[70px] text-[20px] font-midium' id='1'>User{i+1}</button>
                             </div>
-                            <div className='dropdown-content3'>
+                            <div className='dropdown-content3 bg-[lightgray] mt-[5px] pl-[20px]'>
                                 <span>Name:{user.Name}</span><br /><hr />
                                 <span>Email:{user.Email}</span><br /><hr />
                                 <span>Age:{user.Age}</span><br /><hr />
                                 <span>AccountNum:{user.AccountNum}</span>
                             </div>
-                            <hr className='w-[300px]'/>
+                           
                         </div>
             })
         }
