@@ -19,7 +19,7 @@ const Instructions = () => {
         <List/>:   
        <Example/>
         }
-       bg-[#4f2583]
+        <div className='ml-[80%] mt-[10px]'>Version # | Time Zone</div>
     </div>
   )
 }

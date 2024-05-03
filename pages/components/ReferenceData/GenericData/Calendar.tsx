@@ -13,7 +13,7 @@ const Calendar = () => {
       <div>
           <Theader showlist={showList} setshowList={setShowList} />
           {showList ? <List /> : <Example />}
-          <div className='ml-[85%] mt-[10px]'>Version # | Time Zone</div>
+          <div className='ml-[80%] mt-[10px]'>Version # | Time Zone</div>
       </div>
       
     </div>

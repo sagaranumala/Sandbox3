@@ -31,6 +31,7 @@ const Transactions = () => {
              <div className='bg-[gray] h-[40px] rounded-[5px] p-[5px] text-[white] text-[20px] pl-[20px]'>Creditor Agent</div>
              <div className='bg-[gray] h-[40px] rounded-[5px] p-[5px] text-[white] text-[20px] pl-[20px]'>Remittance Information</div>
         </div>
+        <div className='ml-[80%] mt-[10px]'>Version # | Time Zone</div>
     </div>
   )
 }

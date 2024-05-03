@@ -15,7 +15,7 @@ const MOPPreference = () => {
         <List/>:   
        <Example/>
         }
-        <div className='ml-[85%] mt-[10px]'>Version # | Time Zone</div>
+        <div className='ml-[80%] mt-[10px]'>Version # | Time Zone</div>
     </div>
   )
 }
