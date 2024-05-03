@@ -9,7 +9,7 @@ const Region = () => {
   const [showlist,setshowList] =useState(false);
   return (
     <div>
-        <span className='mb-[20px]'>ReferenceData -&gt; GenericData -&gt; Region</span>  
+        <span className='mb-[20px] self-start text-[20px] mt-[10px]'>ReferenceData -&gt; GenericData -&gt; Region</span>  
         <Theader showlist={showlist} setshowList={setshowList}/>
         {showlist?
         <List/>:   

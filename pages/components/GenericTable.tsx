@@ -164,23 +164,46 @@ const Example = () => {
     positionGlobalFilter:"left",
     positionActionsColumn: "last",
     enableColumnOrdering: true,
+    muiTableHeadCellProps: {
+      //simple styling with the `sx` prop, works just like a style prop in this example
+      sx: {
+        fontWeight: 'bold',
+        fontSize: '14px',
+        color:'white',
+        backgroundColor:'#10439F',
+        fontFamily:"sans-serif"
+      },
+    },
+    muiTableBodyRowProps: ({ row }) => ({
+    //conditionally style selected rows
+    sx: {
+      backgroundColor: '#B2B377',
+      color:'blue'
+    },
+  }),
+  muiTableBodyCellProps: ({ column }) => ({
+    //conditionally style pinned columns
+    sx: {
+    //  color:'white'
+    },
+  }),
     //positioncolumnFilterModeOptions:"left",
     enableColumnActions: true,
     createDisplayMode: 'modal', //default ('row', and 'custom' are also available)
     editDisplayMode: 'modal', //default ('row', 'cell', 'table', and 'custom' are also available)
     enableEditing: true,
     getRowId: (row) => row.id,
-    muiToolbarAlertBannerProps: isLoadingUsersError
-      ? {
-          // color: 'error',
-          // children: 'Error loading data',
-        }
-      : undefined,
-    muiTableContainerProps: {
-      sx: {
+    // muiToolbarAlertBannerProps: isLoadingUsersError
+    //   ? {
+    //       // color: 'error',
+    //       // children: 'Error loading data',
+    //     }
+    //   : undefined,
+    // muiTableContainerProps: {
+    //   sx: {
        
-      },
-    },
+    //   },
+    // },
     onCreatingRowCancel: () => setValidationErrors({}),
     onCreatingRowSave: handleCreateUser,
     onEditingRowCancel: () => setValidationErrors({}),

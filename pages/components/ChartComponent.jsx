@@ -9,19 +9,20 @@ const ChartComponent = () => {
   useEffect(() => {
     // Fetch or calculate chart data
     const data = [
-      { name: 'Facebook', users: 2000000000 },
-      { name: 'Instagram', users: 1500000000 },
-      { name: 'Twitter', users: 1000000000 },
-      { name: 'Telegram', users: 500000000 },
+      { name: 'In Progress', users: 2000000000 },
+      { name: 'Completed', users: 1500000000 },
+      { name: 'Duplicated', users: 1000000000 },
+      { name: 'Rejected', users: 500000000 },
     ];
     setChartData(data);
   }, []);
 
   return (
-    <div>
-      <h1>Social Media Users</h1>
+    <div className='flex flex-col gap-y-[30px] justify-center items-center bg-[white] rounded-[10px]'>
+      <h1 className='text-[20px] text-[black]'>Transaction Details</h1>
       <DynamicApexChart
         type="pie"
+        
         series={chartData.map(item => item.users)}
         options={{
           labels: chartData.map(item => item.name),

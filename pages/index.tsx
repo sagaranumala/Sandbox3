@@ -11,17 +11,19 @@ import { Inter } from 'next/font/google'
 // import Profile from './components/Profile'
 //import Example from './components/GenericTable.tsx';
 import Example from './components/GenericTable'
-import Hero from './components/Hero'
+
 import List from './components/List'
 import Transactions from './components/Transactions'
+import Hero from './components/Hero'
+
+
 //import BasicPie from './components/dashboard'
 
 
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <main className=''>
+    <main className='bg-[white]'>
         
         <Hero/>
       

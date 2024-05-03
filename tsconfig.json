@@ -17,6 +17,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/components/GenericTable.tsx", "pages/components/Hero.jsx", "pages/components/Theader.jsx", "pages/components/Chart1.jsx", "pages/components/ReferenceData/calender.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/components/GenericTable.tsx", "pages/components/Hero.tsx", "pages/components/Theader.jsx", "pages/components/Chart1.jsx", "pages/components/ReferenceData/calender.jsx", "pages/components/sideBar.tsx", "pages/components/SideBar2.jsx"],
   "exclude": ["node_modules"]
 }

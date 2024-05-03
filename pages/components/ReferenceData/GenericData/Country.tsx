@@ -9,7 +9,7 @@ const Country = () => {
   const [showlist,setshowList] =useState(false);
   return (
     <div>
-       <span className='mb-[20px]'>ReferenceData -&gt; GenericData -&gt; Country</span>
+       <span className='mb-[20px] self-start text-[20px] '>ReferenceData -&gt; GenericData -&gt; Country</span>
         <Theader showlist={showlist} setshowList={setshowList}/>
         {showlist?
         <List/>:   
