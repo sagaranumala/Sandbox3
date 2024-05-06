@@ -22,9 +22,9 @@ const Dashboard = () => {
                 <div className='box1 h-[120px]  rounded-[10px]  border-solid border-[2px] border-[black] flex justify-center items-center hover:bg-C-Blue hover:text-[white] bg-[#67e8f9]'>Pending Resp</div>
             </div>
                <div className='mt-[50px] flex flex-wrap	justify-between gap-[30px]'>
-                  <ChartComponent/>
-                  <ChartComponent/>
-                  <ChartComponent/>
+                    <ChartComponent/>
+                    <ChartComponent/>
+                    <ChartComponent/>
               </div>
               <div>
                   <Example/>

@@ -18,11 +18,10 @@ const ChartComponent = () => {
   }, []);
 
   return (
-    <div className='flex w-[30%] flex-col gap-y-[30px] justify-center items-center bg-[white] rounded-[10px]'>
-      <h1 className='text-[20px] text-[black]'>Transaction Details</h1>
+    <div className='flex text-[black] min-w-[250px] max-w-[30%] flex-col gap-y-[30px] justify-center items-center bg-[white] rounded-[10px]'>
+      <h1 className='text-[20px]'>Transaction Details</h1>
       <DynamicApexChart
         type="pie"
-        
         series={chartData.map(item => item.users)}
         options={{
           labels: chartData.map(item => item.name),
