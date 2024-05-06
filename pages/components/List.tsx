@@ -84,7 +84,7 @@ useEffect(()=>{
   return (
     <div className='flex flex-col gap-[5px] mt-[50px]'>
         {
-            data.map((user:User1,i)=>{
+          data2[0]?<div>Emptry Data/Error</div>:<div>{data.map((user:User1,i)=>{
                 return <div className="dropdown w-[300px] relative" key={i}>
                             <div className="dropbtn" id='1' >
                                 <ChevronRightSharpIcon className='drop-icon' id='1'/>
@@ -98,8 +98,11 @@ useEffect(()=>{
                             </div>
                            
                         </div>
-            })
+            })}
+            </div>
         }
+    
+      
         {/* <div className="dropdown">
                  <div className="dropbtn" id='1' >
                      <ChevronRightSharpIcon className='drop-icon' id='1'/>
