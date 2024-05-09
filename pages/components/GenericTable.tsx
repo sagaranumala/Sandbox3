@@ -164,7 +164,15 @@ const Example = () => {
     positionGlobalFilter:"left",
     positionActionsColumn: "last",
     enableColumnOrdering: true,
-    muiTableHeadCellProps: {
+    muiFilterTextFieldProps:{
+      sx:{
+          backgroundColor:'white',
+          borderRadius:'5px',
+          paddingLeft:'10px'
+      }
+    },
+
+    muiTableHeadCellProps: ({ table}) => ({
       //simple styling with the `sx` prop, works just like a style prop in this example
       sx: {
         fontWeight: 'bold',
@@ -173,11 +181,11 @@ const Example = () => {
         backgroundColor:'#10439F',
         fontFamily:"sans-serif"
       },
-    },
+}),
     muiTableBodyRowProps: ({ row }) => ({
     //conditionally style selected rows
     sx: {
-      backgroundColor: '#B2B377',
+      //backgroundColor: '#B2B377',
       color:'blue'
     },
   }),
@@ -188,22 +196,24 @@ const Example = () => {
     },
   }),
     //positioncolumnFilterModeOptions:"left",
+    
     enableColumnActions: true,
     createDisplayMode: 'modal', //default ('row', and 'custom' are also available)
     editDisplayMode: 'modal', //default ('row', 'cell', 'table', and 'custom' are also available)
     enableEditing: true,
     getRowId: (row) => row.id,
-    // muiToolbarAlertBannerProps: isLoadingUsersError
-    //   ? {
-    //       // color: 'error',
-    //       // children: 'Error loading data',
-    //     }
-    //   : undefined,
+    muiToolbarAlertBannerProps: isLoadingUsersError
+      ? {
+          // color: 'error',
+          // children: 'Error loading data',
+        }
+      : undefined,
     // muiTableContainerProps: {
     //   sx: {
-       
+    //    height:'5000px'
     //   },
     // },
+  
     onCreatingRowCancel: () => setValidationErrors({}),
     onCreatingRowSave: handleCreateUser,
     onEditingRowCancel: () => setValidationErrors({}),
@@ -250,22 +260,16 @@ const Example = () => {
         </Tooltip>
       </Box>
     ),
-    renderTopToolbarCustomActions: ({ table }) => (
-      <Button
-        variant="contained"
-        onClick={() => {
-          table.setCreatingRow(true); //simplest way to open the create row modal with no default values
-          //or you can pass in a row object to set default values with the `createRow` helper function
-          // table.setCreatingRow(
-          //   createRow(table, {
-          //     //optionally pass in default values for the new row, useful for nested data or other complex scenarios
-          //   }),
-          // );
-        }}
-      >
-        Create New User
-      </Button>
-    ),
+    // renderTopToolbarCustomActions: ({ table }) => (
+    //   <Button
+    //     variant="contained"
+    //     onClick={() => {
+    //       table.setCreatingRow(true);
+    //     }}
+    //   >
+    //     Create New User
+    //   </Button>
+    // ),
     // renderTopToolbarCustomActions: ({ table }) => (
     //    <Button
     //   //   variant="contained"
@@ -285,7 +289,7 @@ const Example = () => {
     state: {
       isLoading: isLoadingUsers,
       isSaving: isCreatingUser || isUpdatingUser || isDeletingUser,
-      showAlertBanner: isLoadingUsersError,
+      //showAlertBanner: isLoadingUsersError,
       showProgressBars: isFetchingUsers,
     },
   });
@@ -306,6 +310,7 @@ const Example = () => {
             }),
         },
       };
+      
       columns.push(x)
       type User = {
         id: string;

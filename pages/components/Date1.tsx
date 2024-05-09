@@ -17,7 +17,7 @@ const DateTimeComponent: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
-  return <div className='text-[white]'>{currentDate}, {currentDateTime}</div>;
+  return <div className='text-[black] font-medium flex justify-end'><div>{currentDate}, {currentDateTime}</div></div>;
 };
 
 export default DateTimeComponent;

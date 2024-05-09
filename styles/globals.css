@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -177,4 +178,54 @@ body {
     padding-right: 10px;
     overflow-y: scroll;  
 }
+ 
+.date1{
+  font-family: sans-serif;
+  font-family: Montserrat;
 
+}
+.profileContainer{
+  /* background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(237,242,242,1) 100%); */
+  background-color: rgba(128, 128, 128, 0.304);
+  box-shadow: 0px 0px 4px 0px #00000040;
+}
+
+
+/* Generic Data
+	Calendar
+	Region
+	Country
+	Currency
+Business Data
+	Office
+	Branch
+	Department
+	Service
+	ServiceGroup
+	ProcessingProfile
+	DaywiseProcessingProfile
+Distribution Data
+	MOP
+	MOPCluster
+	MOPPreference
+	MembershipDirectory
+	ClearingPersona
+	MembershipProperty
+	ClearingProperty
+Customer Data
+	Party
+	Account
+	PartyServiceProfile
+	PartyMOPProfile
+	PartyServiceRoute
+	PartyMOPRoute
+User Data
+	UserProfile
+	Role
+	UserRoleProfile
+	ApprovalSetup
+System Data
+	IDConfiguration
+	TemrinalProfile
+	RouteConfigProfile */
