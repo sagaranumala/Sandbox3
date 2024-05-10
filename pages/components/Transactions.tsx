@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import ChevronRightSharpIcon from '@mui/icons-material/ChevronRightSharp';
+import ObjectDataComponent from './ObjectRender';
 
 interface TransactionData {
   txnId: string;
@@ -50,6 +51,7 @@ const Transactions:  React.FC= () => {
    const [hdrop6,setshowhdrop6]=useState('hidden');
    const [hdrop7,setshowhdrop7]=useState('hidden');
    const [hdrop8,setshowhdrop8]=useState('hidden');
+   const [hdrop9,setshowhdrop9]=useState('hidden');
    
 
   return (
@@ -69,7 +71,7 @@ const Transactions:  React.FC= () => {
             <div className='h-[40px] bg-[lightgray] w-[300px] text-center rounded-[5px] p-[5px]'>Settlement Amount:{transactionData.sttlmtAmt}</div>
             <div className='h-[40px] bg-[lightgray] w-[250px] text-center rounded-[5px] p-[5px]'>Settlement Currency: {transactionData.sttlmtCur}</div>
             <div className='h-[40px] bg-[lightgray] w-[350px] text-center rounded-[5px] p-[5px]'>Execution Date:{transactionData.txnId}</div>
-            <div className='h-[40px] bg-[lightgray] w-[200px] text-center rounded-[5px] p-[5px]'>MOP: <a href='#' className='text-[blue] underline'>{transactionData.mop}</a></div>
+            <div className='h-[40px] bg-[lightgray] text-center rounded-[5px] p-[5px]'>MOP: <a href='#' className='text-[blue] underline'>{transactionData.mop}</a></div>
             <div className='h-[40px] bg-[lightgray] w-[300px] text-center rounded-[5px] p-[5px]'>MOP Business Date: {transactionData.mopBizzDt}</div>
             <div className='h-[40px] bg-[lightgray] w-[300px] text-center rounded-[5px] p-[5px]'>Value Date: {transactionData.valueDt}</div>
             <div className='h-[40px] bg-[lightgray] w-[300px] text-center rounded-[5px] p-[5px]'>MOP Profile: <a href='#' className='text-[blue] underline'>{transactionData.mopProfile}</a></div>
@@ -77,92 +79,121 @@ const Transactions:  React.FC= () => {
             <div className='h-[40px] bg-[lightgray] w-[250px] text-center rounded-[5px] p-[5px]'>Charges: {transactionData.charges}</div>
         </div>
         <div className='flex flex-col gap-[10px] '>
+               <div >
+                    <div className='bg-[gray] h-[50px] rounded-[5px] text-[white] text-[20px] pl-[20px] pr-[20px] flex justify-between' onClick={()=>{
+                                    let x=hdrop9=='hidden'?'block rounded-[10px] ml-[50px] z-[1] mt-[5px]':'hidden';
+                                    setshowhdrop9(x);
+                                    }}>
+                            <div className='mt-[10px]'>Business App Header</div><div><ChevronRightSharpIcon className='text-[yellow] font-bold text-[50px] mt-[0px]'/></div>
+                    </div>
+                    <div className={hdrop9}>
+                         <div>
+                              <ObjectDataComponent objectData={headerData.appHdr} />
+                         </div>
+                    </div>
+               </div>
               <div >
                     <div className='bg-[gray] h-[50px] rounded-[5px] text-[white] text-[20px] pl-[20px] pr-[20px] flex justify-between' onClick={()=>{
-                                    let x=hdrop1=='hidden'?'block rounded-[10px] ml-[50px] w-[200px] z-[1] mt-[5px]':'hidden';
+                                    let x=hdrop1=='hidden'?'block rounded-[10px] ml-[50px] z-[1] mt-[5px]':'hidden';
                                     setshowhdrop1(x);
                                     }}>
                             <div className='mt-[10px]'>Group Header</div><div><ChevronRightSharpIcon className='text-[yellow] font-bold text-[50px] mt-[0px]'/></div>
                     </div>
                     <div className={hdrop1}>
-                         1111
+                         <div>
+                              <ObjectDataComponent objectData={headerData.grpHdr} />
+                         </div>
                     </div>
                </div>
               <div >
                     <div className='bg-[gray] h-[50px] rounded-[5px] text-[white] text-[20px] pl-[20px] pr-[20px] flex justify-between' onClick={()=>{
-                                    let x=hdrop2=='hidden'?'block rounded-[10px] ml-[50px] w-[200px] z-[1] mt-[5px]':'hidden';
+                                    let x=hdrop2=='hidden'?'block rounded-[10px] ml-[50px] z-[1] mt-[5px]':'hidden';
                                     setshowhdrop2(x);
                                     }}>
                             <div className='mt-[10px]'>Debtor</div><div><ChevronRightSharpIcon className='text-[yellow] font-bold text-[50px] mt-[0px]'/></div>
                     </div>
                     <div className={hdrop2}>
-                         2222
+                         <div>
+                              <ObjectDataComponent objectData={headerData.dbtr} />
+                         </div>
                     </div>
               </div>
               <div >
                     <div className='bg-[gray] h-[50px] rounded-[5px] text-[white] text-[20px] pl-[20px] pr-[20px] flex justify-between' onClick={()=>{
-                                    let x=hdrop3=='hidden'?'block rounded-[10px] ml-[50px] w-[200px] z-[1] mt-[5px]':'hidden';
+                                    let x=hdrop3=='hidden'?'block rounded-[10px] ml-[50px] z-[1] mt-[5px]':'hidden';
                                     setshowhdrop3(x);
                                     }}>
                             <div className='mt-[10px]'>Debtor Agent</div><div><ChevronRightSharpIcon className='text-[yellow] font-bold text-[50px] mt-[0px]'/></div>
                     </div>
                     <div className={hdrop3}>
-                         33333
+                         <div>
+                              <ObjectDataComponent objectData={headerData.dbtrAgt} />
+                         </div>
                     </div>
               </div>
               <div >
                     <div className='bg-[gray] h-[50px] rounded-[5px] text-[white] text-[20px] pl-[20px] pr-[20px] flex justify-between' onClick={()=>{
-                                    let x=hdrop4=='hidden'?'block rounded-[10px] ml-[50px] w-[200px] z-[1] mt-[5px]':'hidden';
+                                    let x=hdrop4=='hidden'?'block rounded-[10px] ml-[50px] z-[1] mt-[5px]':'hidden';
                                     setshowhdrop4(x);
                                     }}>
                             <div className='mt-[10px]'>Ultimate Debtor</div><div><ChevronRightSharpIcon className='text-[yellow] font-bold text-[50px] mt-[0px]'/></div>
                     </div>
                     <div className={hdrop4}>
-                         4444
+                         <div>
+                              <ObjectDataComponent objectData={headerData.ultmDbtr} />
+                         </div>
                     </div>
               </div>
               <div >
                     <div className='bg-[gray] h-[50px] rounded-[5px] text-[white] text-[20px] pl-[20px] pr-[20px] flex justify-between' onClick={()=>{
-                                    let x=hdrop5=='hidden'?'block rounded-[10px] ml-[50px] w-[200px] z-[1] mt-[5px]':'hidden';
+                                    let x=hdrop5=='hidden'?'block rounded-[10px] ml-[50px] z-[1] mt-[5px]':'hidden';
                                     setshowhdrop5(x);
                                     }}>
                             <div className='mt-[10px]'>Creditor</div><div><ChevronRightSharpIcon className='text-[yellow] font-bold text-[50px] mt-[0px]'/></div>
                     </div>
                     <div className={hdrop5}>
-                         555
+                          <div>
+                              <ObjectDataComponent objectData={headerData.cdtr} />
+                         </div>
                     </div>
               </div>
               <div >
                     <div className='bg-[gray] h-[50px] rounded-[5px] text-[white] text-[20px] pl-[20px] pr-[20px] flex justify-between' onClick={()=>{
-                                    let x=hdrop6=='hidden'?'block rounded-[10px] ml-[50px] w-[200px] z-[1] mt-[5px]':'hidden';
+                                    let x=hdrop6=='hidden'?'block rounded-[10px] ml-[50px] z-[1] mt-[5px]':'hidden';
                                     setshowhdrop6(x);
                                     }}>
                             <div className='mt-[10px]'>Creditor Agent</div><div><ChevronRightSharpIcon className='text-[yellow] font-bold text-[50px] mt-[0px]'/></div>
                     </div>
                     <div className={hdrop6}>
-                         666
+                          <div>
+                              <ObjectDataComponent objectData={headerData.cdtrAgt} />
+                         </div>
                     </div>
               </div>
               <div >
                     <div className='bg-[gray] h-[50px] rounded-[5px] text-[white] text-[20px] pl-[20px] pr-[20px] flex justify-between' onClick={()=>{
-                                    let x=hdrop7=='hidden'?'block rounded-[10px] ml-[50px] w-[200px] z-[1] mt-[5px]':'hidden';
+                                    let x=hdrop7=='hidden'?'block rounded-[10px] ml-[50px] z-[1] mt-[5px]':'hidden';
                                     setshowhdrop7(x);
                                     }}>
                             <div className='mt-[10px]'>Ultimate Creditor</div><div><ChevronRightSharpIcon className='text-[yellow] font-bold text-[50px] mt-[0px]'/></div>
                     </div>
                     <div className={hdrop7}>
-                         777
+                         <div>
+                              <ObjectDataComponent objectData={headerData.ultmCdtr} />
+                         </div>
                     </div>
               </div>
               <div >
                     <div className='bg-[gray] h-[50px] rounded-[5px] text-[white] text-[20px] pl-[20px] pr-[20px] flex justify-between' onClick={()=>{
-                                    let x=hdrop8=='hidden'?'block rounded-[10px] ml-[50px] w-[200px] z-[1] mt-[5px]':'hidden';
+                                    let x=hdrop8=='hidden'?'block rounded-[10px] ml-[50px] z-[1] mt-[5px]':'hidden';
                                     setshowhdrop8(x);
                                     }}>
                             <div className='mt-[10px]'>Remittance Information</div><div><ChevronRightSharpIcon className='text-[yellow] font-bold text-[50px] mt-[0px]'/></div>
                     </div>
                     <div className={hdrop8}>
-                         888
+                          <div>
+                              <ObjectDataComponent objectData={headerData.rmtInf} />
+                         </div>
                     </div>
               </div>
              {/* <div className='bg-[gray] h-[40px] rounded-[5px] p-[5px] text-[white] text-[20px] pl-[20px]'>Remittance Information</div> */}

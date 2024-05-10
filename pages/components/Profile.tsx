@@ -81,8 +81,8 @@ const Profile: React.FC = () => {
                         <input id="lastname" type="text" value={data2.userName} className='pl-[10px] border-[black] border-[2px] border-solid rounded-[5px] w-[280px] h-[30px]'/>
                      </div>
                      <div>
-                        <label htmlFor="Email">Password: </label><br></br>
-                        <input id="Email" type="text" value={data2.password} className='pl-[10px] border-[black] border-[2px] border-solid rounded-[5px] w-[280px] h-[30px]'/>
+                        <label htmlFor="Password">Password: </label><br></br>
+                        <input id="Password" type="password" value={data2.password} className='pl-[10px] border-[black] border-[2px] border-solid rounded-[5px] w-[280px] h-[30px]'/>
                      </div>
                      <div>
                         <label htmlFor="Phone">Role: </label><br></br>
@@ -99,21 +99,21 @@ const Profile: React.FC = () => {
                        <div>
                           <div>
                              <label htmlFor="operator">Operator: </label>
-                             <input id="firstname" type="text" value={operator1} className='pl-[10px] border-[black] border-[2px] border-solid rounded-[5px] w-[280px] h-[30px]'/>
+                             <input id="firstname" type="text" value={operator1} className='pl-[10px] border-[black] border-[2px] border-solid rounded-[5px] w-[320px] h-[30px]'/>
                           </div>
                           <div className='mt-[20px]'>
                               <label htmlFor="operator">Operator: </label>
-                              <input id="lastname" type="text" value={operator2} className='pl-[10px] border-[black] border-[2px] border-solid rounded-[5px] w-[280px] h-[30px]'/>
+                              <input id="lastname" type="text" value={operator2} className='pl-[10px] border-[black] border-[2px] border-solid rounded-[5px] w-[320px] h-[30px]'/>
                          </div>
                        </div>
                        <div>
                           <div>
                              <label htmlFor="Email">Level-1 Approver: </label>
-                             <input id="Email" type="text" value={approver1} className='pl-[10px] border-[black] border-[2px] border-solid rounded-[5px] w-[280px] h-[30px]'/>
+                             <input id="Email" type="text" value={approver1} className='pl-[10px] border-[black] border-[2px] border-solid rounded-[5px] w-[320px] h-[30px]'/>
                          </div>
                          <div className='mt-[20px]'>
                              <label htmlFor="Phone">Level-2 Approver: </label>
-                             <input id="Phone" type="text" value={approver2} className='pl-[10px] border-[black] border-[2px] border-solid rounded-[5px] w-[280px] h-[30px]'/>
+                             <input id="Phone" type="text" value={approver2} className='pl-[10px] border-[black] border-[2px] border-solid rounded-[5px] w-[320px] h-[30px]'/>
                          </div>
                        </div>
                  </div>

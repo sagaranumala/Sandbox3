@@ -19,6 +19,7 @@ import Party from './ReferenceData/CustomerData/Party';
 import SideBar1 from './SideBar1';
 import SideBar from './sideBar';
 import FadeMenu from './SideBar2';
+import Date1 from './Date1';
 
 
 
@@ -46,9 +47,12 @@ export default function Hero() {
                 
               </div> */}
               <div className='w-[100%] pt-[10px] pr-[30px]'>
+                    <div>
+                      <Date1/>
+                    </div>
                     {
                     PageDisplay()
-                  }
+                   }
               </div>
          </div>
        

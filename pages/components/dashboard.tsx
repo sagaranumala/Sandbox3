@@ -53,9 +53,6 @@ const Dashboard: React.FC<User> = () => {
 
   return (
     <div>
-            <div>
-                 <Date1/>
-            </div>
             <div className=' flex flex-col gap-50px'>
                     {/* <div className='w-[300px] h-[40px] rounded-[10px] bg-[white] border-solid border-[2px] border-[black] text-center mt-[10px]'><h1 className='text-[20px] font-bold text-[blue]'>Dashboard</h1></div>  */}
                     <h1 className='text-[20px] font-bold text-[blue]'>Dashboard</h1>
