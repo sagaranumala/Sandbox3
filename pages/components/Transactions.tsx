@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import ChevronRightSharpIcon from '@mui/icons-material/ChevronRightSharp';
-import ObjectDataComponent from './ObjectRender';
+
+
 
 interface TransactionData {
   txnId: string;
@@ -54,6 +55,21 @@ const Transactions:  React.FC= () => {
    const [hdrop9,setshowhdrop9]=useState('hidden');
    
 
+//    const renderObj1 = (objectData: any) => {
+//      if (!objectData || typeof objectData !== 'object') {
+//        return null; // or handle the case where objectData is undefined or not an object
+//      }
+//      return (
+//           <div style={{ marginTop: '20px', marginBottom: '20px', display: 'flex', flexWrap: 'wrap', gap: '50px', paddingTop: '10px', paddingRight: '20px', fontSize: '20px' }}>
+//             {Object.entries(objectData).map(([key, value]) => (
+//               <div key={key} style={{ paddingLeft: '20px', paddingRight: '20px', height: '40px', backgroundColor: 'lightgray', textAlign: 'center', borderRadius: '5px', padding: '5px' }}>
+//                 <span>{key}</span> : <span>{value}</span>
+//               </div>
+//             ))}
+//           </div>
+//         );
+//    }
+
   return (
     <div className='flex flex-col gap-[20px] '>
         <span className=''>Transactions -&gt; Customer Credit Transfer -&gt; IPTXN20240812000001</span>
@@ -88,7 +104,7 @@ const Transactions:  React.FC= () => {
                     </div>
                     <div className={hdrop9}>
                          <div>
-                              <ObjectDataComponent objectData={headerData.appHdr} />
+                         {/* <ObjectDataComponent objectData={headerData.appHdr} /> */}
                          </div>
                     </div>
                </div>
@@ -101,7 +117,7 @@ const Transactions:  React.FC= () => {
                     </div>
                     <div className={hdrop1}>
                          <div>
-                              <ObjectDataComponent objectData={headerData.grpHdr} />
+                              {/* <ObjectDataComponent objectData={headerData.grpHdr} /> */}
                          </div>
                     </div>
                </div>
@@ -114,7 +130,7 @@ const Transactions:  React.FC= () => {
                     </div>
                     <div className={hdrop2}>
                          <div>
-                              <ObjectDataComponent objectData={headerData.dbtr} />
+                              {/* <ObjectDataComponent objectData={headerData.dbtr} /> */}
                          </div>
                     </div>
               </div>
@@ -127,7 +143,7 @@ const Transactions:  React.FC= () => {
                     </div>
                     <div className={hdrop3}>
                          <div>
-                              <ObjectDataComponent objectData={headerData.dbtrAgt} />
+                              {/* <ObjectDataComponent objectData={headerData.dbtrAgt} /> */}
                          </div>
                     </div>
               </div>
@@ -140,7 +156,7 @@ const Transactions:  React.FC= () => {
                     </div>
                     <div className={hdrop4}>
                          <div>
-                              <ObjectDataComponent objectData={headerData.ultmDbtr} />
+                              {/* <ObjectDataComponent objectData={headerData.ultmDbtr} /> */}
                          </div>
                     </div>
               </div>
@@ -153,7 +169,7 @@ const Transactions:  React.FC= () => {
                     </div>
                     <div className={hdrop5}>
                           <div>
-                              <ObjectDataComponent objectData={headerData.cdtr} />
+                              {/* <ObjectDataComponent objectData={headerData.cdtr} /> */}
                          </div>
                     </div>
               </div>
@@ -166,7 +182,7 @@ const Transactions:  React.FC= () => {
                     </div>
                     <div className={hdrop6}>
                           <div>
-                              <ObjectDataComponent objectData={headerData.cdtrAgt} />
+                              {/* <ObjectDataComponent objectData={headerData.cdtrAgt} /> */}
                          </div>
                     </div>
               </div>
@@ -179,7 +195,7 @@ const Transactions:  React.FC= () => {
                     </div>
                     <div className={hdrop7}>
                          <div>
-                              <ObjectDataComponent objectData={headerData.ultmCdtr} />
+                              {/* <ObjectDataComponent objectData={headerData.ultmCdtr} /> */}
                          </div>
                     </div>
               </div>
@@ -192,7 +208,7 @@ const Transactions:  React.FC= () => {
                     </div>
                     <div className={hdrop8}>
                           <div>
-                              <ObjectDataComponent objectData={headerData.rmtInf} />
+                              {/* <ObjectDataComponent objectData={headerData.rmtInf} /> */}
                          </div>
                     </div>
               </div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Example from './GenericTable'
-import ChartComponent from './chartComponent'
+
 import Date1 from './Date1'
 
 
@@ -74,9 +74,9 @@ const Dashboard: React.FC<User> = () => {
                         <div className='box1 h-[120px] cursor-pointer rounded-[10px]  border-solid border-[2px] border-[black] flex justify-center items-center bg-[#67e8f9]'> <div>WAREHOUSED</div>(05)</div>
                     </div>
                     <div className='mt-[50px] flex flex-wrap	justify-between gap-[30px]'>
-                            <ChartComponent chartData={chartData} Title={title1}/>
+                            {/* <ChartComponent chartData={chartData} Title={title1}/>
                             <ChartComponent chartData={chartData1} Title={title2}/>
-                            <ChartComponent chartData={chartData2} Title={title3}/>
+                            <ChartComponent chartData={chartData2} Title={title3}/> */}
                     </div>
                     <div>
                         <Example/>
