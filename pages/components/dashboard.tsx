@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Example from './GenericTable'
 
 import Date1 from './Date1'
+import ChartComponent from './ChartComponent';
 
 
 interface User {
@@ -77,6 +78,9 @@ const Dashboard: React.FC<User> = () => {
                             {/* <ChartComponent chartData={chartData} Title={title1}/>
                             <ChartComponent chartData={chartData1} Title={title2}/>
                             <ChartComponent chartData={chartData2} Title={title3}/> */}
+                            <ChartComponent/>
+                            <ChartComponent/>
+                            <ChartComponent/>
                     </div>
                     <div>
                         <Example/>

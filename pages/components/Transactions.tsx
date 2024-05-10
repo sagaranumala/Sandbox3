@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import ChevronRightSharpIcon from '@mui/icons-material/ChevronRightSharp';
 
-
-
 interface TransactionData {
   txnId: string;
   txnType: string;
